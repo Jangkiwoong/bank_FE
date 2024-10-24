@@ -49,7 +49,7 @@ const TransferMoney = () => {
     return(
         <Container>
             <TransferBtn onClick={transfer}>송금</TransferBtn>
-            <Revers onClick={revers}>되돌리기</Revers>
+            <Revers onClick={revers}>초기화</Revers>
         </Container>
     );
 }
