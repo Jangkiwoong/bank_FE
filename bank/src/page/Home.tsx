@@ -18,7 +18,7 @@ const Home = () => {
     useEffect(() => {
         const accountData = async () =>{
             try{
-                const response = await axios.get<ApiResponse>("http://localhost:8080/api/get/all/accounts");
+                const response = await axios.get<ApiResponse>("http://localhost:8080/api/get/all/account");
                 setAccounts(response.data);
             } catch (e) {
                 console.error("요청 에러 : ", e);
