@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import GetAccount from "../components/public/GetAccount";
+import TransferMoney from "../components/public/TransferMoney";
 
 const Home = () => {
     return(
         <Container>
             <GetAccount />
+            <TransferMoney />
         </Container>
     );
 }
