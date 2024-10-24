@@ -43,6 +43,14 @@ const GetAccount = () => {
 export default GetAccount;
 const Container = styled.div`
     width: 30%;
+    max-height: 70vh; /* 최대 높이 설정 */
+    overflow: hidden;
+    overflow-y: auto; /* 스크롤 가능 */
+
+    padding: 10px;
+
+    border: 1px solid black;
+    border-radius: 10px;
 `;
 const Account = styled.p`
 
@@ -53,7 +61,7 @@ const AccountContainer = styled.div`
     align-items: center;
     justify-content: space-between;
 
-    border: 1px solid white;
+    border: 1px solid black;
     border-radius: 10px;
     gap: 30px;
     margin-top: 15px;
