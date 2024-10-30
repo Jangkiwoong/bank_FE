@@ -5,10 +5,10 @@ const TransferMoney = () => {
     const transfer = () => {
         const transferData = async () =>{
             try{
-                    await axios.put("http://localhost:8080/api/update/send/money",
+                    const response = await axios.put("http://localhost:8080/api/update/send/money",
                     {
-                        myAccount: "1111-1111-1111",
-                        relativeAccount: "0000-0000-0000",
+                        myAccount: "0000-0000-0000",
+                        relativeAccount: "1111-1111-1112",
                         transferMoney: 1000, // 예시 송금액
                     },
                     {
@@ -16,7 +16,7 @@ const TransferMoney = () => {
                             "Content-Type": "application/json",
                         },
                     });
-
+                    console.log(response);
             } catch (e) {
                 console.error("요청 에러 : ", e);
             }
@@ -29,8 +29,8 @@ const TransferMoney = () => {
             try{
                     await axios.put("http://localhost:8080/api/update/send/money",
                     {
-                        myAccount: "0000-0000-0000",
-                        relativeAccount: "1111-1111-1111",
+                        myAccount: "1111-1111-1111",
+                        relativeAccount: "0000-0000-0000",
                         transferMoney: 1000, // 예시 송금액
                     },
                     {

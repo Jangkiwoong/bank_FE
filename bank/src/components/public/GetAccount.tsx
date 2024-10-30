@@ -33,6 +33,7 @@ const GetAccount = () => {
             {accounts?.data.map(accounts => (
                 <AccountContainer key={accounts.id}>
                     <Account >ID : {accounts.id}</Account>
+                    {/* <Account >NAME : {accounts.}</Account> */}
                     <Account >계좌번호 : {accounts.account}</Account>
                     <Account >보유잔액 : {accounts.money}</Account>
                 </AccountContainer>
