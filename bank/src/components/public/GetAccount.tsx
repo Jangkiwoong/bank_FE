@@ -24,7 +24,7 @@ const exampleResponse: ApiResponse = {
         {
             id: 2,
             userName: "JaneSmith",
-            account: "987-654-321",
+            account: "987-654-321", 
             money: 3000,
         }
     ],

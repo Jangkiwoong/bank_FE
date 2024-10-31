@@ -4,10 +4,17 @@ import TransferMoney from "../components/public/TransferMoney";
 
 const Home = () => {
     return(
-        <Container>
-            <GetAccount />
-            <TransferMoney />
-        </Container>
+        <div>
+            <Container>
+                <GetAccount />
+                <TransferMoney />
+            </Container>
+            <Box />
+            <Box />
+            <Box />
+            <Box />
+            <ClearElement />
+        </div>
     );
 }
 export default Home;
@@ -16,5 +23,17 @@ const Container = styled.div`
     display: flex;
     justify-content: center;  /* 수평 가운데 정렬 */
     align-items: center;      /* 수직 가운데 정렬 */
-    flex-direction: column; /* 세로 정렬 */
+    flex-flow: column wrap; /* 세로 정렬 */
+`
+const Box = styled.div`
+    float: left;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+`
+const ClearElement = styled.div`
+    clear: both;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
 `
