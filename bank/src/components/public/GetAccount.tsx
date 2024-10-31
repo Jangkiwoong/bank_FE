@@ -4,6 +4,7 @@ import axios from 'axios';
 
 interface Account {
     id: number;
+    userName: string;
     account: string;
     money: number;
 }
@@ -11,9 +12,26 @@ interface ApiResponse {
     message: string;
     data: Account[];
 }
+const exampleResponse: ApiResponse = {
+    message: "성공적으로 데이터를 가져왔습니다.",
+    data: [
+        {
+            id: 1,
+            userName: "JohnDoe",
+            account: "123-456-789",
+            money: 1500,
+        },
+        {
+            id: 2,
+            userName: "JaneSmith",
+            account: "987-654-321",
+            money: 3000,
+        }
+    ],
+};
 
 const GetAccount = () => {
-    const [accounts, setAccounts] = useState<ApiResponse | null>(null);
+    const [accounts, setAccounts] = useState<ApiResponse | null>(exampleResponse);
 
     useEffect(() => {
         const accountData = async () =>{
@@ -22,7 +40,6 @@ const GetAccount = () => {
                 setAccounts(response.data);
             } catch (e) {
                 console.error("요청 에러 : ", e);
-                setAccounts(null);
             }
         };
         accountData();
@@ -33,7 +50,7 @@ const GetAccount = () => {
             {accounts?.data.map(accounts => (
                 <AccountContainer key={accounts.id}>
                     <Account >ID : {accounts.id}</Account>
-                    {/* <Account >NAME : {accounts.}</Account> */}
+                    <Account >NAME : {accounts.userName}</Account>
                     <Account >계좌번호 : {accounts.account}</Account>
                     <Account >보유잔액 : {accounts.money}</Account>
                 </AccountContainer>
