@@ -26,20 +26,23 @@ export default Home;
 
 const CenteredContainer = styled.div`
     border: 1px solid black;
+    
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    width: 100%;
-    height:100%;
+    align-items: center;
 `;
 
 const Container = styled.div`
+    width: 46.4%;
     border: 1px solid black;
+    margin: 10px;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start; /* 왼쪽 정렬 */
-    width: 50%;
-    height: 30%;
+    justify-content: flex-start;
+    align-content: center;
 `;
 
 const Box = styled.div`
