@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Home = () => {
+const TestFlex = () => {
     return (
         <div>
             <CenteredContainer>
@@ -22,7 +22,7 @@ const Home = () => {
     );
 }
 
-export default Home;
+export default TestFlex;
 
 const CenteredContainer = styled.div`
     border: 1px solid black;

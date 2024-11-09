@@ -1,5 +1,6 @@
 export const PATH_URL = {
     HOME: '/',
-    TEST: '/test',
+    TESTFLEX: '/test/flex',
+    TESTGRID: '/test/grid',
     NOTFOUND: '/404'
   };
